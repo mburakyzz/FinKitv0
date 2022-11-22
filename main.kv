@@ -1,0 +1,80 @@
+#:import utils kivy.utils
+<Page>:
+    RelativeLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#648495")
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        RelativeLayout:
+            pos_hint:{"center_x":.5, "top": 1}
+            size_hint: 1,41/428
+            id: screen_top
+            BoxLayout:
+                size_hint:1,1
+                pos_hint: {"x":0, "top": 1}
+                canvas:
+                    Color:
+                        rgb: utils.get_color_from_hex("#385F71")
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius:[0,0,30,30]
+            Button:
+                background_color:[0,0,0,0]
+                size_hint: 39/926,39/41
+                pos_hint: {'x':46/926,'center_y':.5}
+                on_press: root.MainPage()
+            Image:
+                source: 'img/swiss.png'
+                size_hint: 39/926,39/41
+                pos_hint: {'x':46/926,'center_y':.5}
+                allow_stretch:True
+            Label:
+                pos_hint: {'x':85/926,'center_y':.5}
+                size_hint: 185/926,1
+                text: 'Sa'
+                color:utils.get_color_from_hex("#F0C782")
+                font_name:r'Bangers-Regular.ttf'
+                font_size:20
+            Button:
+                background_color:[0,0,0,0]
+                size_hint: 620/926,29/41
+                pos_hint: {'x':275/926,'center_y':.5}
+                on_press: root.WealthPage()
+            Image:
+                source: 'img/chest_background.png'
+                size_hint: 620/926,29/41
+                pos_hint: {'x':275/926,'center_y':.5}
+                allow_stretch:True
+                keep_ratio:False
+            Image:
+                source: 'img/chest.png'
+                size_hint: 39/926,39/41
+                pos_hint: {'x':275/926,'center_y':.5}
+                allow_stretch:True
+            Image:
+                source: 'img/chest_fiat.png'
+                size_hint: 85/926,26/41
+                pos_hint: {'x':465.66/926,'center_y':.5}
+                allow_stretch:True
+            Image:
+                source: 'img/chest_crypto.png'
+                size_hint: 85/926,26/41
+                pos_hint: {'x':562.37/926,'center_y':.5}
+                allow_stretch:True
+            Image:
+                source: 'img/chest_edge.png'
+                size_hint: 85/926,26/41
+                pos_hint: {'x':659.08/926,'center_y':.5}
+                allow_stretch:True
+            Image:
+                source: 'img/chest_bullbear.png'
+                size_hint: 120/926,26/41
+                pos_hint: {'x':761.28/926,'center_y':.5}
+                allow_stretch:True
+        RelativeLayout:
+            pos_hint:{"center_x":.5, "top": 387/428}
+            size_hint: 1,387/428
+            id: screen_bottom
